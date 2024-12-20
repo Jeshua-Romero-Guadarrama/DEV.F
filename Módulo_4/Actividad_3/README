@@ -1,0 +1,51 @@
+# Proyecto “Métodos de Arreglos – Tienda Online”
+
+Pequeño módulo en **JavaScript (ES2020+)** que demuestra el uso práctico de los métodos `filter()`, `sort()` y `map()` (y extra `reduce()` + `every()`) para manipular un catálogo de productos de una tienda online.
+
+---
+
+## 📁 Estructura del repositorio
+
+```
+Actividad_3/
+├── proyecto_metodos_arreglos.js  # Lógica principal del ejercicio
+└── README_METODOS_ARREGLOS.md    # Este archivo
+```
+
+## 🛠️ Requisitos
+
+* **Node.js** (v14 o superior) ─ o, en su caso, un navegador moderno
+* Editor recomendado: **VS Code**
+
+## 🚀 Cómo ejecutarlo con Node.js
+
+1. Abre una terminal en la carpeta del proyecto.
+2. Ejecuta:
+
+   ```bash
+   node proyecto_metodos_arreglos.js
+   ```
+3. Verás en la consola:
+
+   * Una tabla con los productos cuyo precio < 100 USD.
+   * Esos mismos productos ordenados alfabéticamente.
+   * Un arreglo con solo los nombres.
+   * El total (suma) de los precios económicos.
+   * Un mensaje que indica si todos comparten la misma categoría.
+
+### Ejemplo de salida resumida
+
+```text
+🛍️  Productos con precio < $100
+┌─────────┬──────────────┬────────┬─────────────┐
+│ (índice)│   nombre     │ precio │  categoria  │
+├─────────┼──────────────┼────────┼─────────────┤
+│    0    │  'Camiseta'  │   15   │   'Ropa'    │
+│    1    │   'Libro'    │   12   │ 'Educación' │
+│    2    │  'Zapatos'   │   50   │   'Ropa'    │
+│    3    │ 'Auriculares'│   45   │'Electrónica'│
+└─────────┴──────────────┴────────┴─────────────┘
+…
+💰  Total de productos económicos: $122.00
+📦  ¿Todos los productos económicos son de la misma categoría? No
+```

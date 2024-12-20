@@ -1,0 +1,80 @@
+# Gestión de Lista de Compras
+
+Este proyecto proporciona un pequeño módulo en **JavaScript (ES2020+)** para gestionar una lista de compras usando un arreglo y tres operaciones básicas:
+
+* **agregarProducto**: Añade un producto al final de la lista (sin duplicados).
+* **eliminarProducto**: Elimina un producto existente de la lista.
+* **mostrarLista**: Muestra la lista completa en la consola.
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+Actividad_2/
+├── proyecto_estructuras_datos.js   # Lógica principal de la lista de compras
+└── README.md                       # Documentación del proyecto
+```
+
+## 🛠️ Requisitos
+
+* [Node.js](https://nodejs.org/) (versión LTS o superior)
+* Navegador web moderno (si deseas probar con HTML)
+* (Opcional) VS Code con la extensión Live Server
+
+## 🚀 Instalación y Configuración
+
+1. Clona o descarga este repositorio en tu máquina local.
+2. Abre una terminal y navega a la carpeta del proyecto:
+
+   ```bash
+   cd Actividad_2
+   ```
+3. Asegúrate de que Node.js esté disponible:
+
+   ```bash
+   node -v
+   ```
+
+## 🏃‍♂️ Uso con Node.js
+
+1. Añade llamadas a las funciones al final del archivo `proyecto_estructuras_datos.js`. Por ejemplo:
+
+   ```js
+   agregarProducto('Leche');
+   agregarProducto('Pan');
+   mostrarLista();
+   ```
+2. Ejecuta el script con Node.js:
+
+   ```bash
+   node ./proyecto_estructuras_datos.js
+   ```
+3. Observa la salida en la consola.
+
+## 🔄 Uso interactivo con Node REPL
+
+1. Inicia el REPL de Node en la carpeta del proyecto:
+
+   ```bash
+   node
+   ```
+2. Carga el módulo:
+
+   ```js
+   .load proyecto_estructuras_datos.js
+   ```
+3. Llama a las funciones directamente:
+
+   ```js
+   > agregarProducto('Huevos');
+   > mostrarLista();
+   ```
+
+## 📋 Descripción de las funciones
+
+| Función              | Parámetros       | Comportamiento                                                                                |
+| -------------------- | ---------------- | --------------------------------------------------------------------------------------------- |
+| **agregarProducto**  | `producto` (str) | Añade `producto` si no está vacío ni duplicado (ignora mayúsculas). Informa en consola.       |
+| **eliminarProducto** | `producto` (str) | Elimina la primera coincidencia (insensible a mayúsculas). Informa si no existe o se eliminó. |
+| **mostrarLista**     | –                | Imprime la lista numerada. Indica si está vacía.                                              |

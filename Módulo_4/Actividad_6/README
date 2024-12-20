@@ -1,0 +1,48 @@
+# Proyecto “Recursión – Búsqueda de Regalo en Lista Navideña”
+
+Ejemplo sencillo en **JavaScript (ES2020+)** que ilustra cómo emplear **recursión** para buscar un objeto en un arreglo y reportar su posición o ausencia. No se requiere backtracking explícito, pero el patrón recursivo prepara la base para extenderlo con decisiones más complejas.
+
+---
+
+## 📁 Estructura del repositorio
+
+```
+recursion_regalo/
+├── proyecto_recursion_backtracking.js    # Implementación de la búsqueda recursiva
+└── README_RECURSION_BACKTRACKING.md      # Este documento
+```
+
+## 🛠️ Requisitos
+
+* **Node.js** v14 o superior, o un navegador moderno.
+* Editor recomendado: **Visual Studio Code**.
+
+## 🚀 Cómo ejecutar el script
+
+1. Clona o descarga la carpeta `recursion_regalo`.
+2. Abre una terminal en dicha carpeta.
+3. Ejecuta:
+
+   ```bash
+   node proyecto_recursion_backtracking.js
+   ```
+4. Verás mensajes indicando la posición del regalo buscado o que no está en la lista.
+
+### Ejemplo de salida
+
+```
+Lego está en la posición 3.
+Camión no está en la lista.
+```
+
+---
+
+## 📖 Explicación de la recursión
+
+| Paso | Acción                                                                                      |
+| ---- | ------------------------------------------------------------------------------------------- |
+| 1    | **Caso base 1**: `index === gifts.length` → se recorrió toda la lista → devolver "no está". |
+| 2    | **Caso base 2**: `gifts[index] === giftName` → regalo encontrado → devolver posición.       |
+| 3    | **Caso recursivo**: llamar a `findGift` con `index + 1`.                                    |
+
+Complejidad temporal **O(n)** y espacial **O(n)** (profundidad de la pila de llamadas).
