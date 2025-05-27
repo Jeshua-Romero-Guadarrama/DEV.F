@@ -7,9 +7,9 @@ Pequeño módulo en **JavaScript (ES2020+)** que demuestra el uso práctico de l
 ## 📁 Estructura del repositorio
 
 ```
-Actividad_2/
-├── metodos_arreglos.js        # Lógica principal del ejercicio
-└── README_METODOS_ARREGLOS.md # Este archivo
+Actividad_3/
+├── proyecto_metodos_arreglos.js  # Lógica principal del ejercicio
+└── README_METODOS_ARREGLOS.md    # Este archivo
 ```
 
 ## 🛠️ Requisitos
@@ -23,7 +23,7 @@ Actividad_2/
 2. Ejecuta:
 
    ```bash
-   node metodos_arreglos.js
+   node proyecto_metodos_arreglos.js
    ```
 3. Verás en la consola:
 
