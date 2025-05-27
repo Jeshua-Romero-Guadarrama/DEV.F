@@ -1,0 +1,54 @@
+# Proyecto “Algoritmo Sliding Window – Palabra más larga”
+
+Herramienta educativa en **JavaScript (ES2020+)** que muestra cómo aplicar la técnica de **ventana deslizante (Sliding Window)** para detectar la palabra de mayor longitud dentro de un texto dado. Ideal para practicar manipulación de cadenas y punteros con complejidad *O(n).*
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+sliding_window/
+├── proyecto_algoritmo_sliding_window.js  # Implementación principal
+└── README_SLIDING_WINDOW.md              # Este documento
+```
+
+## 🛠️ Requisitos
+
+* **Node.js** v14 o superior (o un navegador moderno si prefieres ejecutarlo en la consola del navegador).
+* Editor recomendado: **Visual Studio Code**.
+
+## 🚀 Ejecución rápida en terminal (Node.js)
+
+1. Descarga o clona la carpeta `sliding_window`.
+2. Abre una terminal en la carpeta.
+3. Ejecuta:
+
+   ```bash
+   node proyecto_algoritmo_sliding_window.js
+   ```
+4. Verás el texto de ejemplo y la palabra más larga detectada.
+
+### Ejemplo de salida
+
+```
+Texto de entrada:
+JavaScript es un lenguaje de programación increíble para aprender.
+
+Palabra más larga encontrada:
+programación
+```
+
+---
+
+## 📖 Detalles del algoritmo
+
+| Paso | Acción                                                                                       |
+| ---- | -------------------------------------------------------------------------------------------- |
+| 1    | Dividir el texto con `.split(/\s+/)` para obtener un arreglo de palabras.                    |
+| 2    | Iniciar dos punteros `left` y `right` en 0 (la ventana cubre una palabra a la vez).          |
+| 3    | Mientras `right` < `words.length`, comparar la longitud de `words[right]` con `longestWord`. |
+| 4    | Si es más larga, actualizar `longestWord`.                                                   |
+| 5    | Avanzar la ventana (`right++`, `left = right`) y repetir.                                    |
+| 6    | Al finalizar, devolver `longestWord` (primera palabra más larga si hay empate).              |
+
+Complejidad temporal **O(n)** y espacial **O(1)**.
