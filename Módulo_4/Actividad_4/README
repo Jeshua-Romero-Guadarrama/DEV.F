@@ -1,0 +1,50 @@
+# Proyecto “Algoritmo de los Dos Punteros – Organización de Mesa”
+
+Pequeño ejercicio en **JavaScript (ES2020+)** que demuestra la técnica de los dos punteros para localizar, en una lista de invitados ordenada alfabéticamente, el **primer par consecutivo cuyos nombres comienzan con la misma letra**. Ideal para practicar recorridos lineales con complejidad *O(n)*.
+
+---
+
+## 📁 Estructura del repositorio
+
+```
+organizacion_cena/
+├── proyecto_algoritmo_dos_punteros.js   # Implementación del algoritmo
+└── README_DOS_PUNTEROS.md               # Este documento
+```
+
+## 🛠️ Requisitos
+
+* **Node.js** v14 o superior —o, en su defecto, un navegador moderno.
+* Editor recomendado: **VS Code**.
+
+## 🚀 Cómo ejecutar el script
+
+1. Clona o descarga la carpeta `organizacion_cena`.
+2. Abre una terminal en dicha carpeta.
+3. Ejecuta:
+
+   ```bash
+   node proyecto_algoritmo_dos_punteros.js
+   ```
+4. La consola mostrará la lista original de invitados y el primer par que cumple la condición, o `null` si no existe.
+
+### Ejemplo de salida
+
+```text
+Lista de invitados: [ 'Ana', 'Carlos', 'Cecilia', 'Daniel', 'Diana', 'Eduardo' ]
+Pareja encontrada: [ 'Carlos', 'Cecilia' ]
+```
+
+---
+
+## 📖 Explicación del algoritmo
+
+| Paso | Acción                                                                                   |
+| ---- | ---------------------------------------------------------------------------------------- |
+| 1    | Puntero **inicio** en posición `i`, puntero **siguiente** en `i + 1`.                    |
+| 2    | Comparar las iniciales (normalizadas a minúsculas).                                      |
+| 3    | Si coinciden → devolver `[arr[i], arr[i+1]]`.                                            |
+| 4    | Si no coinciden → avanzar ambos punteros una posición y repetir mientras haya elementos. |
+| 5    | Si el bucle termina sin coincidencias → devolver `null`.                                 |
+
+La comparación se realiza en tiempo **O(1)** y el recorrido completo en tiempo **O(n)**, donde *n* es el número de invitados.
