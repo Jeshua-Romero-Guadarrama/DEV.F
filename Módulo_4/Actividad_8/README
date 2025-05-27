@@ -1,0 +1,66 @@
+# Proyecto “Gestor de Notas Personales con Node.js”
+
+Aplicación de línea de comandos en **Node.js (CommonJS)** que demuestra el manejo básico de archivos mediante el módulo nativo **`fs`**, permitiendo **crear, listar y eliminar** notas almacenadas en un archivo JSON (`notas.json`).
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+gestor_notas/
+├── proyecto_introduccion_manejo_archivos_node.js        # Lógica principal y CLI
+├── notas.json                                           # Se genera automáticamente tras la primera nota
+└── README_GESTOR_NOTAS.md                               # Este documento
+```
+
+## 🛠️ Requisitos
+
+* **Node.js** v14 o superior
+* Sistema operativo con permisos de escritura en el directorio del script
+
+## 🚀 Uso rápido
+
+1. Abre una terminal dentro de la carpeta `gestor_notas`.
+2. Ejecuta alguno de los comandos:
+
+| Acción            | Comando de ejemplo                                                                        |
+| ----------------- | ----------------------------------------------------------------------------------------- |
+| **Añadir nota**   | `node proyecto_introduccion_manejo_archivos_node.js add "Compras" "Comprar leche y pan."` |
+| **Listar notas**  | `node proyecto_introduccion_manejo_archivos_node.js list`                                 |
+| **Eliminar nota** | `node proyecto_introduccion_manejo_archivos_node.js del "Compras"`                        |
+
+> La primera vez que agregues una nota se creará `notas.json` con el formato:
+>
+> ```json
+> [
+>   {
+>     "titulo": "Compras",
+>     "contenido": "Comprar leche y pan."
+>   }
+> ]
+> ```
+
+### Ejemplo de flujo completo
+
+```bash
+$ node proyecto_introduccion_manejo_archivos_node.js add "Tarea" "Repasar algoritmos."
+✅  Nota agregada con éxito.
+
+$ node proyecto_introduccion_manejo_archivos_node.js list
+📒  Listado de notas
+──────────────────
+1. Tarea
+   Repasar algoritmos.
+
+$ node proyecto_introduccion_manejo_archivos_node.js del "Tarea"
+🗑️  Nota con título "Tarea" eliminada.
+```
+
+---
+
+## 📖 Detalles de implementación
+
+* **Lectura** (`leerNotas`)  → `fs.readFileSync` + `JSON.parse` para cargar notas existentes.
+* **Escritura** (`guardarNotas`) → `fs.writeFileSync` con `JSON.stringify(..., null, 2)` para formato legible.
+* **Duplicados** → Se verifica que no exista otra nota con el mismo título antes de insertar.
+* **CLI** → Uso de `process.argv` para un interfaz mínima (`add`, `list`, `del`).
